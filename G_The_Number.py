@@ -5,7 +5,7 @@ name = input("Hello what's your name: ")
 try:
     y = int(input(f"ok {name}, chose a number : "))
 except ValueError:
-    print("you did not enter a number,pleas try again")
+    print("you did not enter a number,please try again")
     quit()
 
 SecretNumber = random.randint(1, y)
