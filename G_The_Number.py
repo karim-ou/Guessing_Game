@@ -19,13 +19,17 @@ for guessesTaken in range(1, 7):
     except ValueError:
         print("you did not enter a number, try again")
         quit()
-    # give a feedback to the player
+    # give a feedback to the player based on the guess they give
+    # not close
     if guess in range((SecretNumber + 5), y):
         print("your guess is too high")
+    # colse range
     elif guess in range(SecretNumber, (SecretNumber + 5)):
         print("your guess is a litter bit higher")
+    # not close
     elif guess in range(1, (SecretNumber - 5)):
         print("your guess is too low")
+    # close range
     elif guess in range((SecretNumber - 5), SecretNumber):
         print("your guess is a litter bit lower")
     else:
