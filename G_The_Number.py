@@ -20,24 +20,19 @@ for guessesTaken in range(1, 7):
         print("you did not enter a number, try again")
         quit()
     # give a feedback to the player based on the guess they give
-    # not close
-    if guess in range((SecretNumber + 5), y):
-        print("your guess is too high")
-    # colse range
-    elif guess in range(SecretNumber, (SecretNumber + 5)):
-        print("your guess is a litter bit higher")
-    # not close
-    elif guess in range(1, (SecretNumber - 5)):
-        print("your guess is too low")
-    # close range
-    elif guess in range((SecretNumber - 5), SecretNumber):
-        print("your guess is a litter bit lower")
+    
+    # win !
+    if guess == SecretNumber:
+        print(f"good job, {name} you guess my number in {str(guessesTaken)} guesses")
+        quit()
+    # guess is low
+    elif guess < SecretNumber:
+        print("your guess is low")
+    # guess is high
+    elif guess > SecretNumber:
+        print("your guess is high")
     else:
         break
-# win !
-if guess == SecretNumber:
-    print(f"Good job, {name} you guess my number in {str(guessesTaken)} guesses")
 # lose :(
-else:
+if guess != SecretNumber:
     print(f"NOPE, the number i was thinking of was {str(SecretNumber)}")
- 
